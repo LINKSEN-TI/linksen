@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKSEN - Your Secure Connection</title>
+    <!-- Incluye Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuente Inter de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Comportamiento de desplazamiento suave */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- Sección de Cabecera (Header) -->
+    <header class="bg-gray-800 text-white py-4 px-6 md:px-12 flex justify-between items-center shadow-lg">
+        <div class="flex items-center space-x-2">
+            <!-- Icono de enlace o logo simulado -->
+            <svg class="h-8 w-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            <h1 class="text-2xl font-bold">LINKSEN</h1>
+        </div>
+        <div class="hidden md:block">
+            <p class="text-sm font-light text-gray-400">Your Secure Connection</p>
+        </div>
+    </header>
+
+    <!-- Sección de Inicio (Hero) -->
+    <main class="container mx-auto px-4 py-12 md:py-20">
+        <section id="inicio" class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-blue-400 leading-tight mb-4">
+                Bienvenido a LINKSEN
+            </h2>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-300 mb-8">
+                En LINKSEN, construimos el puente entre la tecnología y sus necesidades reales.
+                Somos una empresa de soluciones tecnológicas dedicada a conectar hogares y Pequeñas y Medianas Empresas (PyMEs) con la seguridad y eficiencia del futuro.
+            </p>
+            <div class="inline-block p-2 bg-blue-500 text-white font-bold rounded-full shadow-lg">
+                <span class="text-sm md:text-base">"Your Secure Connection"</span>
+            </div>
+        </section>
+
+        <!-- Sección de "Cómo lo Hacemos" -->
+        <section id="proceso" class="mb-16">
+            <h3 class="text-3xl font-bold text-center text-blue-400 mb-8">Como lo hacemos?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Paso 1: Análisis -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                    <h4 class="text-xl font-bold text-blue-400 mb-2">1. Análisis</h4>
+                    <p class="text-gray-300">Analizamos sus necesidades específicas para diseñar una solución a medida que se ajuste perfectamente a su realidad.</p>
+                </div>
+                <!-- Paso 2: Integración -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                    <h4 class="text-xl font-bold text-blue-400 mb-2">2. Integración</h4>
+                    <p class="text-gray-300">Implementamos soluciones que se integran de forma fluida con sus sistemas existentes, minimizando las interrupciones.</p>
+                </div>
+                <!-- Paso 3: Evaluación -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                    <h4 class="text-xl font-bold text-blue-400 mb-2">3. Evaluación</h4>
+                    <p class="text-gray-300">Realizamos pruebas exhaustivas y evaluaciones continuas para garantizar que las soluciones sean robustas y efectivas.</p>
+                </div>
+                <!-- Paso 4: Solución -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                    <h4 class="text-xl font-bold text-blue-400 mb-2">4. Solución</h4>
+                    <p class="text-gray-300">Entregamos un producto final que no solo resuelve su problema, sino que también aporta un valor duradero.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botones de Llamado a la Acción (Call to Action) -->
+        <section class="text-center mb-16">
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                <button id="btn-hogar" class="bg-blue-500 text-white font-bold py-3 px-8 rounded-full shadow-xl hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                    SOLUCIONES PARA HOGARES
+                </button>
+                <button id="btn-empresas" class="bg-transparent text-blue-400 border-2 border-blue-400 font-bold py-3 px-8 rounded-full shadow-xl hover:bg-gray-800 transition duration-300 transform hover:scale-105">
+                    SOLUCIONES PARA EMPRESAS
+                </button>
+            </div>
+        </section>
+
+        <!-- Contenedor para las soluciones (oculto por defecto) -->
+        <section id="soluciones-container" class="mt-12">
+            <!-- Sección de Soluciones para Hogares -->
+            <div id="hogar-services" class="hidden">
+                <h3 class="text-3xl font-bold text-blue-400 mb-6 text-center">Soluciones para Hogares 🏡</h3>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-6">
+                    <h4 class="text-xl font-bold text-blue-400 mb-2">Servicios para el Hogar 🏡</h4>
+                    <p class="text-gray-300">En LINKSEN, tu tecnología es nuestra prioridad. Ofrecemos soluciones para que disfrutes de un hogar más inteligente y seguro. ¡Di adiós al estrés tecnológico! 💻🛡️</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Cámaras de Seguridad 📹</h4>
+                        <p class="text-gray-300">Cámaras de Seguridad de alta calidad para hogares, incluyendo sistemas IP con inteligencia artificial para detección de rostros.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Casa inteligente 💡</h4>
+                        <p class="text-gray-300">Automatización y programación del encendido y apagado de luces, cámaras, y otros dispositivos inteligentes mediante Alexa y Google Home.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Sistemas de Alarma 🚨</h4>
+                        <p class="text-gray-300">Instalación y configuración de sistemas de alarma con sensores de movimiento y apertura para una protección completa.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Instalación de Software 🖥️</h4>
+                        <p class="text-gray-300">Instalación y configuración de cualquier tipo de software que necesite en su hogar.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Soporte Técnico 📞</h4>
+                        <p class="text-gray-300">Ofrecemos soporte técnico integral, que incluye asistencia preventiva y correctiva, tanto de forma presencial como remota, para mantener tus equipos funcionando de manera óptima y solucionar problemas de forma rápida y eficiente.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Protege tus Recuerdos: Respaldo y Recuperación de Datos ☁️💾</h4>
+                        <p class="text-gray-300">No pierdas tus fotos y archivos. Con nuestros servicios de Respaldo y Recuperación de Datos, tus recuerdos siempre estarán a salvo.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Optimiza tus Equipos: Puesta a Punto y Actualizaciones 🚀</h4>
+                        <p class="text-gray-300">¿Tu PC está lenta? 🐢 Lo solucionamos. Con la Puesta a Punto de Equipos, eliminamos virus y optimizamos tu sistema para que vuelva a ser rápido. Y si necesitas más poder, te ayudamos con Actualizaciones de Hardware como instalar un SSD.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Un Hogar Inteligente y Seguro 📶🔒</h4>
+                        <p class="text-gray-300">Una conexión a Internet lenta puede arruinar una película o una reunión virtual. Con nuestro servicio de Instalación y Configuración de Repetidores, eliminamos las zonas con señal débil para que disfrutes de una conexión Wi-Fi estable en cada rincón de tu casa. Además, te ayudamos a proteger a tu familia con nuestra Consultoría en Seguridad Cibernética Familiar. Te asesoramos para que aprendas a configurar controles parentales y asegurar la red Wi-Fi, protegiéndote de intrusiones y garantizando que tus hijos naveguen de forma segura.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <button id="btn-up-hogar" class="bg-gray-800 text-blue-400 border border-blue-400 font-bold py-2 px-6 rounded-full shadow-xl hover:bg-gray-700 transition duration-300 transform hover:scale-105">
+                        Subir al inicio ⬆️
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sección de Soluciones para Empresas -->
+            <div id="empresas-services" class="hidden">
+                <h3 class="text-3xl font-bold text-blue-400 mb-6 text-center">Soluciones para Empresas 💼</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Implementación de Infraestructura ⚙️</h4>
+                        <p class="text-gray-300">Instalación y configuración de servidores locales para una infraestructura de TI sólida y escalable.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Cámaras de Seguridad con IA 🤖</h4>
+                        <p class="text-gray-300">Sistemas de cámaras con inteligencia artificial para conteo de personas y vehículos.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Sistemas de Alarma 🚨</h4>
+                        <p class="text-gray-300">Sistemas de alarma avanzados para la protección de activos y personal en su empresa.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Control de Acceso Inteligente 🔐</h4>
+                        <p class="text-gray-300">Implementación de cerraduras y sistemas biométricos para un acceso seguro y controlado.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Optimización de Redes 📈</h4>
+                        <p class="text-gray-300">Optimización de redes LAN o inalámbricas para mejorar el rendimiento y la gestión.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Soporte Técnico 🤝</h4>
+                        <p class="text-gray-300">Ofrecemos soporte técnico integral, que incluye asistencia preventiva y correctiva, tanto de forma presencial como remota, para mantener tus equipos funcionando de manera óptima y solucionar problemas de forma rápida y eficiente.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Consultoría e Integración 💡</h4>
+                        <p class="text-gray-300">Servicios de consultoría para integrar soluciones tecnológicas que se adapten a su negocio.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Pólizas de Mantenimiento 🔧</h4>
+                        <p class="text-gray-300">Pólizas de mantenimiento preventivo y correctivo para sus equipos de cómputo.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Servidores NAS 💾</h4>
+                        <p class="text-gray-300">Soluciones de almacenamiento de información centralizado para su empresa.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Respaldo y Recuperación 🔄</h4>
+                        <p class="text-gray-300">Servicios completos de respaldo y recuperación de información para proteger sus datos críticos.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Gestión de Información 🗂️</h4>
+                        <p class="text-gray-300">Organización de documentos y gestión de roles de usuarios para un flujo de trabajo eficiente.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">IA para su Empresa 🤖</h4>
+                        <p class="text-gray-300">Integración de soluciones de Inteligencia Artificial para optimizar procesos y tomar decisiones informadas.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Desarrollo Web 💻</h4>
+                        <p class="text-gray-300">Desarrollo de aplicaciones web personalizadas para satisfacer las necesidades únicas de su negocio.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">Cableado y Redes 🔗</h4>
+                        <p class="text-gray-300">Servicios de cableado estructurado y configuración de redes y enlaces inalámbricos.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <button id="btn-up-empresas" class="bg-gray-800 text-blue-400 border border-blue-400 font-bold py-2 px-6 rounded-full shadow-xl hover:bg-gray-700 transition duration-300 transform hover:scale-105">
+                        Subir al inicio ⬆️
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript para manejar la visibilidad de las secciones y el desplazamiento -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnHogar = document.getElementById('btn-hogar');
+            const btnEmpresas = document.getElementById('btn-empresas');
+            const btnUpHogar = document.getElementById('btn-up-hogar');
+            const btnUpEmpresas = document.getElementById('btn-up-empresas');
+            const hogarServices = document.getElementById('hogar-services');
+            const empresasServices = document.getElementById('empresas-services');
+            const solucionesContainer = document.getElementById('soluciones-container');
+
+            // Función para ocultar todas las secciones de servicios
+            function hideAllServices() {
+                hogarServices.classList.add('hidden');
+                empresasServices.classList.add('hidden');
+                solucionesContainer.classList.add('hidden');
+            }
+
+            // Maneja el clic en el botón de Hogar
+            btnHogar.addEventListener('click', () => {
+                hideAllServices();
+                hogarServices.classList.remove('hidden');
+                solucionesContainer.classList.remove('hidden');
+                // Desplazarse a la sección de soluciones
+                document.getElementById('soluciones-container').scrollIntoView();
+            });
+
+            // Maneja el clic en el botón de Empresas
+            btnEmpresas.addEventListener('click', () => {
+                hideAllServices();
+                empresasServices.classList.remove('hidden');
+                solucionesContainer.classList.remove('hidden');
+                // Desplazarse a la sección de soluciones
+                document.getElementById('soluciones-container').scrollIntoView();
+            });
+
+            // Maneja el clic en los botones "Subir al inicio"
+            btnUpHogar.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            btnUpEmpresas.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+
+</body>
+</html>
